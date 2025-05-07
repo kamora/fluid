@@ -1,6 +1,6 @@
 # Fluid
 
-  A UID generation library. 
+Just another one UID generation library
 
 ## Install
 
