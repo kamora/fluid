@@ -35,7 +35,7 @@ func Encode[T uint16 | uint32 | uint64](value T) string {
 	}
 
 	if reflect.TypeFor[T]().Kind() == reflect.Uint64 {
-		limit = 11
+		limit = 12
 	}
 
 	if value > 61 {
@@ -48,7 +48,7 @@ func Encode[T uint16 | uint32 | uint64](value T) string {
 
 	output = fmt.Sprintf("%d%s", len(output), output)
 
-	for len(output) < limit {
+	for len(output)-1 < limit {
 		output += convert(rand.N[uint16](62))
 	}
 
